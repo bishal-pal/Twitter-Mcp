@@ -12,6 +12,7 @@ export const auth = betterAuth({
         twitter: { 
             clientId: process.env.TWITTER_ID as string, 
             clientSecret: process.env.TWITTER_SECRET as string,
+            scope: ["tweet.write", "dm.write"] // necessary scopes
         },
     },
     plugins: [nextCookies()],
